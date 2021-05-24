@@ -1,9 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.armeniana.hunter">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+  
     <application
 
-        android:label="com.armeniana.hunter"
+        android:label="Hunter Delivery"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCmZxG6DWqeKlfovVSZEBfGQfNF82SRxmY"

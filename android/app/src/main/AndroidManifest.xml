@@ -1,8 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.armeniana.hunter">
-   <application
+    <uses-permission android:name="android.permission.INTERNET" />   
 
-        android:label="com.armeniana.hunter"
+    <application
+        android:label="Hunter Delivery"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
