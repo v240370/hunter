@@ -39,7 +39,7 @@ class AuthScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.red,
                         image: DecorationImage(
-                            image: AssetImage('assets/images/logo2.png'),
+                            image: AssetImage('assets/images/logo250.png'),
                             fit: BoxFit.contain)
 
                     ),

@@ -20,7 +20,7 @@ class AppDrawer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.black,
         image: DecorationImage(
-          image: AssetImage('assets/images/logo2.jpg'),
+          image: AssetImage('assets/images/logo250.png'),
         fit: BoxFit.contain)
 
           ),

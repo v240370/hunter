@@ -64,7 +64,7 @@ class CategoriesOverviewScreen extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.black,
               image: DecorationImage(
-                  image: AssetImage('assets/images/logo1.jpg'),
+                  image: AssetImage('assets/images/logo1000q.jpg'),
                   fit: BoxFit.contain)),
 
            ),
