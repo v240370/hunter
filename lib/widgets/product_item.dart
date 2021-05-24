@@ -1,5 +1,5 @@
-import 'package:HunterDelivery/models/style.dart';
-import 'package:HunterDelivery/widgets/title.dart';
+import 'package:hunter/models/style.dart';
+import 'package:hunter/widgets/title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

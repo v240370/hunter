@@ -33,8 +33,8 @@ class Products with ChangeNotifier {
     return _items.firstWhere((prod) => prod.id == id);
   }
 
-  Product findByCategoryId(String CategoryId) {
-    return _items.firstWhere((category) => category.id == CategoryId);
+  Product findByCategory(String category) {
+    return _items.firstWhere((category) => category == category);
   }
 
   // void showFavoritesOnly() {
@@ -80,6 +80,46 @@ class Products with ChangeNotifier {
       throw (error);
     }
   }
+
+
+
+  Future<void> filterByCategory([bool filterByCategory = false]) async {
+    final filterString = filterByCategory ? 'orderBy="category"&equalTo="category"' : '';
+    var url = 'https://hunter-9f58f.firebaseio.com/products.json?auth=$authToken&$filterString';
+    try {
+      final response = await http.get(url);
+      final extractedData = json.decode(response.body) as Map<String, dynamic>;
+      if (extractedData == null) {
+        return;
+      }
+      url =
+      'https://hunter-9f58f.firebaseio.com/userFavorites/$userId.json?auth=$authToken';
+      final favoriteResponse = await http.get(url);
+      final favoriteData = json.decode(favoriteResponse.body);
+      final List<Product> loadedProducts = [];
+      extractedData.forEach((prodId, prodData) {
+        loadedProducts.add(Product(
+          id: prodId,
+          title: prodData['title'],
+          category: prodData['category'],
+          description: prodData['description'],
+          price: prodData['price'],
+          netto: prodData['netto'],
+          isFavorite:
+          favoriteData == null ? false : favoriteData[prodId] ?? false,
+          imageUrl: prodData['imageUrl'],
+        ));
+      });
+      _items = loadedProducts;
+      notifyListeners();
+    } catch (error) {
+      throw (error);
+    }
+  }
+
+
+
+
 
   Future<void> addProduct(Product product) async {
     final url =

@@ -1,10 +1,8 @@
-import 'package:HunterDelivery/providers/auth.dart';
-import 'package:HunterDelivery/screens/product_detail_screen.dart';
-import 'package:HunterDelivery/screens/product_filtered_screen.dart';
-//import 'package:HunterDelivery/screens/products_overview_screen.dart';
+import 'package:hunter/providers/auth.dart';
+import 'package:hunter/screens/product_detail_screen.dart';
+import 'package:hunter/screens/products_filtered_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../screens/products_overview_screen.dart';
 import '../providers/category.dart';
 import '../providers/cart.dart';
 //import '../models/category.dart';
@@ -28,7 +26,7 @@ class CategoryItem extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
              Navigator.of(context).pushNamed(
-               ProductsOverviewScreen.routeName,);
+               ProductsFilteredScreen.routeName,);
            },
           child: Column(
             children: [

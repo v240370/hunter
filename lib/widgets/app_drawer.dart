@@ -1,5 +1,6 @@
-import 'package:HunterDelivery/screens/cart_screen.dart';
-import 'package:HunterDelivery/screens/products_overview_screen.dart';
+import 'package:hunter/screens/cart_screen.dart';
+import 'package:hunter/screens/location_screen.dart';
+import 'package:hunter/screens/products_overview_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -30,7 +31,7 @@ class AppDrawer extends StatelessWidget {
 
           Divider(),
           ListTile(
-            leading: Icon(Icons.shop),
+            leading: Icon(Icons.home),
             title: Text('Категории'),
             onTap: () {
               Navigator.of(context).pushReplacementNamed('/');
@@ -38,7 +39,7 @@ class AppDrawer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.shop),
+            leading: Icon(Icons.local_dining),
             title: Text('Товары'),
             onTap: () {
               Navigator.of(context)
@@ -47,7 +48,7 @@ class AppDrawer extends StatelessWidget {
           ),
             Divider(),
           ListTile(
-            leading: Icon(Icons.payment),
+            leading: Icon(Icons.motorcycle),
             title: Text('Заказы'),
             onTap: () {
               Navigator.of(context)
@@ -56,7 +57,7 @@ class AppDrawer extends StatelessWidget {
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.payment),
+            leading: Icon(Icons.local_grocery_store),
             title: Text('Корзина'),
             onTap: () {
               Navigator.of(context)
@@ -70,6 +71,15 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(UserProductsScreen.routeName);
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.map),
+            title: Text('Мы здесь'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(LocationScreen.routeName);
             },
           ),
           Divider(),

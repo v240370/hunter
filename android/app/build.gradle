@@ -22,18 +22,19 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
+//apply plugin: 'com.google.secrets_gradle_plugin'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 28
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
     defaultConfig {
-        applicationId "com.company.example"
+        applicationId "com.armeniana.hunter"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()

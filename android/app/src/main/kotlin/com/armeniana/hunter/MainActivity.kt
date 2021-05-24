@@ -1,4 +1,4 @@
-package com.example.hunter_delivery_vol
+package com.armeniana.hunter
 
 import io.flutter.embedding.android.FlutterActivity
 
