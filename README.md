@@ -1,4 +1,4 @@
-# hunter_delivery_vol
+# hunter
 
 Delivery foods in Volzhsky
 
